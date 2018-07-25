@@ -1,4 +1,5 @@
-root = "/home/ethellehte/myfirstapp/current"
+application_directory = "/home/ethellehte/myfirstapp"
+root = "#{application_directory}/current"
 working_directory root
 
 pid "#{root}/tmp/pids/unicorn.pid"
@@ -6,11 +7,11 @@ pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-worker_processes Integer(ENV['WEB_CONCURRENCY'])
+worker_processes 1
 timeout 30
 preload_app true
 
-listen '/tmp/unicorn.spui.sock', backlog: 64
+listen '#{application_directory}/shared/unicorn.sock', backlog: 64
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
