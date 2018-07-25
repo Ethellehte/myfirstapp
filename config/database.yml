@@ -46,7 +46,7 @@ production:
    timeout: 500
    username: myfirstapp
    password: ENV['PROD_PASS']
-   database: "myfirstapp_production"
+   database: myfirstapp_production
 
 
 
