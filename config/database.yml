@@ -39,9 +39,14 @@ test:
   <<: *default
   database: "myfirstapp_test"
 
-# production:
-#   <<: *default
-#   database: "myfirstapp_production"
+production:
+   adapter: postgresql
+   encoding: unicode
+   pool: 5
+   timeout: 500
+   username: myfirstapp
+   password: ENV['PROD_PASS']
+   database: "myfirstapp_production"
 
 
 
