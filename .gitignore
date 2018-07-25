@@ -19,5 +19,7 @@
 .env
 /node_modules
 /yarn-error.log
-
+config/deploy.rb
+config/deploy
+config/unicorn
 .byebug_history

@@ -23,24 +23,25 @@
 # production:
 #   <<: *default
 #   database: db/production.sqlite3
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: blog_development
   pool: 5
   timeout: 500
   username: ethellehte
-  password:
+  password: 
 
+development:
+  <<: *default
+  database: "myfirstapp_development"
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: blog_test
-  pool: 5
-  timeout: 5000
-  username: ethellehte
-  password:
+  <<: *default
+  database: "myfirstapp_test"
+
+# production:
+#   <<: *default
+#   database: "myfirstapp_production"
 
 
 

@@ -5,8 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '~> 2.4.2'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rails', '~> 5.1.6'
@@ -28,6 +27,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'simple_form'
 
+gem 'unicorn', '~> 5.1'
+
 gem 'coffee-rails', '~> 4.2'
 
 gem 'turbolinks', '~> 5'
@@ -36,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 
-# gem 'capistrano-rails', group: :development
+
 
 gem 'unicorn', '~> 5.1'
 
@@ -51,10 +52,11 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
