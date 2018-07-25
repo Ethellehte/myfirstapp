@@ -11,7 +11,7 @@ worker_processes 1
 timeout 30
 preload_app true
 
-listen '#{application_directory}/shared/unicorn.sock', backlog: 64
+listen "#{application_directory}/shared/unicorn.sock", backlog: 64
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
