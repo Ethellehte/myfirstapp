@@ -45,7 +45,7 @@ production:
    pool: 5
    timeout: 500
    username: myfirstapp
-   password: ENV['PROD_PASS']
+   password: truelast32
    database: myfirstapp_production
 
 
