@@ -23,3 +23,6 @@ config/deploy.rb
 config/deploy
 config/unicorn
 .byebug_history
+config/secrets.yml
+y
+y.pub
