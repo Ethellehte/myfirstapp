@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:production, :development, :test]
 
 gem 'rails', '~> 5.1.6'
 
@@ -22,8 +22,6 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 gem 'kaminari'
-
-gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'simple_form'
 
