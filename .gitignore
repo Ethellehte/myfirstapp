@@ -26,3 +26,4 @@ config/unicorn
 config/secrets.yml
 y
 y.pub
+config/secrets.yml
