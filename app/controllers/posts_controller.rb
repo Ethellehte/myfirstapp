@@ -49,6 +49,10 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :text)
     end
 
+    def test
+      "test"
+    end
+
 
 
 end
